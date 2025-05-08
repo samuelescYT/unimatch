@@ -44,7 +44,7 @@ export default function Home() {
               </div>
               <div className="mx-auto lg:ml-auto">
                 <img
-                  src="/placeholder.svg?height=400&width=500"
+                  src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="UniMatch Dashboard"
                   className="rounded-lg object-cover shadow-lg"
                   width={500}
