@@ -44,7 +44,7 @@ export default function Home() {
               </div>
               <div className="mx-auto lg:ml-auto">
                 <img
-                  src="/placeholder.svg?height=400&width=500"
+                  src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="UniMatch Dashboard"
                   className="rounded-lg object-cover shadow-lg"
                   width={500}
@@ -138,17 +138,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <section className="w-full py-12 md:py-20 bg-white border-t">
-        <div className="container px-4 md:px-6 text-center space-y-4">
-          <h2 className="text-xl font-semibold">Zona de administración</h2>
-          <p className="text-sm text-gray-500 pb-4">Solo para miembros del equipo de UniMatch</p>
-          <Link href="/funcionalidades_adicionales/admin/revision-documentos">
-            <Button variant="outline" className="text-red-600 border-red-600 hover:bg-red-50">
-              Ir a Revisión de Documentos
-            </Button>
-          </Link>
-        </div>
-      </section>
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 text-center">
           <div className="text-sm text-gray-500">© 2025 UniMatch. Todos los derechos reservados.</div>

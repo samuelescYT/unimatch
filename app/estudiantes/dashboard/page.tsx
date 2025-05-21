@@ -193,7 +193,9 @@ export default function DashboardPage() {
                 </div>
               </CardContent>
               <CardFooter className="bg-muted/50 p-4">
-                <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Postularme</Button>
+                <Link href={'/estudiantes/ofertas'} className="w-full">
+                    <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Postularme</Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
