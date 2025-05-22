@@ -44,6 +44,15 @@ export default function PerfilEmpleadorPage() {
 
   return (
     <div className="container py-8 space-y-8">
+      <Card className="border-l-4 border-yellow-500 bg-yellow-50">
+  <CardContent className="py-4">
+    <p className="text-sm text-yellow-800 font-medium">
+      📁 Tus documentos han sido subidos correctamente y están en <strong>revisión por el equipo de UniMatch</strong>. 
+      Te notificaremos cuando el estado cambie a “Verificado”.
+    </p>
+  </CardContent>
+</Card>
+
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl font-bold flex items-center gap-3">

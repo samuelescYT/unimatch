@@ -15,6 +15,7 @@ import {
   Calendar,
   BookOpen,
   ArrowLeft,
+  Verified,
 } from "lucide-react"
 
 export default function PerfilPage() {
@@ -52,7 +53,10 @@ export default function PerfilPage() {
                     Verificado
                   </Badge>
                 </div>
-                <p className="text-muted-foreground pt-4">Estudiante de Ingeniería Informática</p>
+                <div className="flex items-center gap-2 pt-1">
+                  <p className="text-muted-foreground">Estudiante de Ingeniería Informática</p>
+                  <Verified className="text-emerald-600 h-4 w-4"/>
+                </div>
                 <p className="text-muted-foreground">Universidad Nacional de Tecnología</p>
               </div>
             </div>
@@ -150,6 +154,20 @@ export default function PerfilPage() {
                       </p>
                     </div>
                   </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Materias cursadas</h3>
+                  <p className="text-sm text-muted-foreground mb-2">Certificado por la universidad</p>
+                  <ul className="list-disc pl-6 text-sm text-muted-foreground space-y-1">
+                    <li>Fundamentos de Programación</li>
+                    <li>Matemáticas Discretas</li>
+                    <li>Estructuras de Datos</li>
+                    <li>Bases de Datos</li>
+                    <li>Sistemas Operativos</li>
+                    <li>Redes de Computadores</li>
+                    <li>Ingeniería de Software</li>
+                    <li>Arquitectura de Computadores</li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>

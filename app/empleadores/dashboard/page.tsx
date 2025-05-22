@@ -194,8 +194,10 @@ export default function DashboardEmpleadorPage() {
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <LogOut className="mr-2 h-4 w-4" />
-                  <span>Cerrar sesión</span>
+                  <Link href={"/"} className="w-full flex items-center">
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Cerrar sesión</span>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -296,10 +298,12 @@ export default function DashboardEmpleadorPage() {
                     </div>
                   </CardContent>
                   <CardFooter className="bg-muted/50 p-4 flex justify-between">
-                    <Button variant="outline" size="sm" className="gap-1">
-                      <User className="h-3 w-3" />
-                      Ver perfil
-                    </Button>
+                    <Link href={`/empleadores/perfil-estudiante`}>
+                        <Button variant="outline" size="sm" className="gap-1">
+                          <User className="h-3 w-3" />
+                          Ver perfil
+                        </Button>
+                    </Link>
                     <Link href="/funcionalidades_adicionales/empleadores/confirmacion-contratacion">
                     <Button size="sm" className="gap-1 bg-emerald-600 hover:bg-emerald-700">
                       <MessageSquare className="h-3 w-3" />

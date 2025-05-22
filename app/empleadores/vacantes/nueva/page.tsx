@@ -14,12 +14,24 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowLeft, Plus, Trash2 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { useRouter } from "next/navigation"
+
 
 export default function NuevaVacantePage() {
   const [requisitos, setRequisitos] = useState([""])
   const [beneficios, setBeneficios] = useState([""])
   const [habilidades, setHabilidades] = useState("")
   const [habilidadesLista, setHabilidadesLista] = useState<string[]>([])
+  const router = useRouter()
+
+const handlePublicar = () => {
+  const confirmado = window.confirm("✅ Vacante publicada con éxito.")
+  if (confirmado) {
+    router.push("/empleadores/dashboard")
+  }
+}
+
+
 
   const agregarRequisito = () => {
     setRequisitos([...requisitos, ""])
@@ -301,7 +313,10 @@ export default function NuevaVacantePage() {
             </CardContent>
             <CardFooter className="flex justify-between">
               <Button variant="outline">Guardar como borrador</Button>
-              <Button className="bg-emerald-600 hover:bg-emerald-700">Publicar vacante</Button>
+              <Button onClick={handlePublicar} className="bg-emerald-600 hover:bg-emerald-700">
+                Publicar vacante
+              </Button>
+
             </CardFooter>
           </Card>
         </div>

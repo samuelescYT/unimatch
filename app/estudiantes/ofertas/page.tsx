@@ -63,7 +63,6 @@ export default function DetalleOfertaPage({ params }: { params: { id: string } }
     ],
     habilidades: ["React", "JavaScript", "CSS", "HTML", "Git"],
     educacion: "Ingeniería de Sistemas, Desarrollo de Software o áreas afines",
-    experiencia: "1-2 años",
     match: 95,
     postulados: 12,
     estado: "activa",
@@ -151,13 +150,6 @@ export default function DetalleOfertaPage({ params }: { params: { id: string } }
                       Salario
                     </h3>
                     <p className="text-sm">{oferta.salario}</p>
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="font-semibold flex items-center gap-2">
-                      <Briefcase className="h-4 w-4 text-muted-foreground" />
-                      Experiencia
-                    </h3>
-                    <p className="text-sm">{oferta.experiencia}</p>
                   </div>
                   <div className="space-y-2">
                     <h3 className="font-semibold flex items-center gap-2">

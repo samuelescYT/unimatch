@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { Search, Bell, User, LogOut, Briefcase, MapPin, Clock, Building, BookOpen, Settings, Sparkles, Star } from "lucide-react"
+import { Search, Bell, User, LogOut, Briefcase, MapPin, Clock, Building, BookOpen, Settings, Sparkles, Star, Globe2, Flame } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,30 +24,33 @@ const jobOffers = [
     title: "Desarrollador Frontend Junior",
     company: "TechSolutions",
     location: "Remoto",
-    type: "Tiempo completo",
+    type: "Proyecto",
     logo: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
     tags: ["React", "JavaScript", "CSS"],
     posted: "Hace 2 días",
+    featured: true,
   },
   {
     id: 2,
     title: "Asistente de Marketing Digital",
     company: "MarketPro",
     location: "Presencial",
-    type: "Medio tiempo",
+    type: "Proyecto",
     logo: "https://cdn-icons-png.flaticon.com/512/5969/5969059.png",
     tags: ["Marketing", "Redes Sociales", "Analytics"],
     posted: "Hace 3 días",
+    featured: false,
   },
   {
     id: 3,
     title: "Analista de Datos",
     company: "DataInsights",
     location: "Híbrido",
-    type: "Tiempo completo",
+    type: "Proyecto",
     logo: "https://cdn-icons-png.flaticon.com/512/5696/5696591.png",
     tags: ["Python", "SQL", "Tableau"],
     posted: "Hace 1 día",
+    featured: false,
   },
   {
     id: 4,
@@ -58,6 +61,18 @@ const jobOffers = [
     logo: "https://cdn-icons-png.flaticon.com/512/5968/5968520.png",
     tags: ["Figma", "Adobe XD", "Diseño"],
     posted: "Hace 5 días",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Desarrollador Backend Node.js",
+    company: "LinkedIn - Oferta externa",
+    location: "Remoto",
+    type: "Proyecto",
+    logo: "https://cdn-icons-png.flaticon.com/512/145/145807.png",
+    tags: ["Node.js", "APIs", "MongoDB"],
+    posted: "Hace 1 día",
+    featured: false,
   },
 ]
 
@@ -142,7 +157,6 @@ export default function DashboardPage() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
           </div>
         </div>
       </header>
@@ -168,6 +182,11 @@ export default function DashboardPage() {
                         <p className="text-sm text-muted-foreground">{job.company}</p>
                       </div>
                     </div>
+                    {job.featured && (
+                      <Badge className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1">
+                        <Flame className="inline-block mr-1 h-3 w-3" /> Destacada
+                      </Badge>
+                    )}
                   </div>
                   <div className="mt-4 grid gap-2">
                     <div className="flex items-center text-sm text-muted-foreground">
@@ -182,6 +201,12 @@ export default function DashboardPage() {
                       <Building className="mr-1 h-4 w-4" />
                       {job.posted}
                     </div>
+                    {job.company.includes("LinkedIn") && (
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Globe2 className="mr-1 h-4 w-4" />
+                        Oferta externa
+                      </div>
+                    )}
                   </div>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {job.tags.map((tag, index) => (
@@ -194,7 +219,7 @@ export default function DashboardPage() {
               </CardContent>
               <CardFooter className="bg-muted/50 p-4">
                 <Link href={'/estudiantes/ofertas'} className="w-full">
-                    <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Postularme</Button>
+                  <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Postularme</Button>
                 </Link>
               </CardFooter>
             </Card>
